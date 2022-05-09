@@ -14,22 +14,21 @@ import { BoardDialogComponent } from './dialogs/board-dialog.component';
 import { TaskDialogComponent } from './dialogs/task-dialog.component';
 
 @NgModule({
-  declarations: [
-    BoardListComponent,
-    BoardComponent,
-    BoardDialogComponent,
-    TaskDialogComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    SharedModule,
-    KanbanRoutingModule,
-    FormsModule,
-    DragDropModule,
-    MatDialogModule,
-    MatButtonToggleModule,
-  ],
-  entryComponents: []
+    declarations: [
+        BoardListComponent,
+        BoardComponent,
+        BoardDialogComponent,
+        TaskDialogComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule,
+        SharedModule,
+        KanbanRoutingModule,
+        FormsModule,
+        DragDropModule,
+        MatDialogModule,
+        MatButtonToggleModule,
+    ]
 })
 export class KanbanModule {}
