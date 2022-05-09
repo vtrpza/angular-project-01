@@ -21,6 +21,6 @@ import { MatButtonToggleModule } from '@angular/material/button-toggle';
     MatDialogModule,
     MatButtonToggleModule,
   ],
-  entryComponents: [BoardDialogComponent, TaskDialogComponent]
+  entryComponents: []
 })
 export class KanbanModule {}
