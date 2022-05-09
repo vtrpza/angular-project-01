@@ -21,7 +21,7 @@
         cdkDrag
         *ngFor="let task of board.tasks; let i = index"
       >
-        <mat-card [ngClass]="task.label"> {{ task.description }} </mat-card>
+        <mat-card [ngClass]="task.label!"> {{ task.description }} </mat-card>
       </div>
     </div>
   </mat-card>
