@@ -46,6 +46,7 @@
         <mat-error *ngIf="password?.invalid && password?.dirty">
           Password must be at least 6 characters long
         </mat-error>
+        
       </mat-form-field>
   
       <mat-form-field
@@ -59,10 +60,6 @@
           placeholder="Confirm password"
           autocomplete="off"
         />
-  
-        <mat-error *ngIf="passwordConfirm?.dirty && !passwordDoesMatch">
-          Password does not match
-        </mat-error>
       </mat-form-field>
   
       <mat-error class="server-error">{{ serverMessage }}</mat-error>
