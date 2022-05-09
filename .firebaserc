@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "angular-project01-4ad1a"
+  },
+  "targets": {
+    "angular-project01-4ad1a": {
+      "hosting": {
+        "angular-project01": [
+          "angular-project01-4ad1a"
+        ]
+      }
+    }
   }
 }
