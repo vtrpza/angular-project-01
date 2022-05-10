@@ -17,8 +17,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
         Create
       </button>
     </div>
-  `,
-  styles: []
+  `
 })
 export class BoardDialogComponent {
   constructor(

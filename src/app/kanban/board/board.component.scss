@@ -7,8 +7,8 @@
 }
 
 .inner-card {
-  margin: 5px 0;
-  cursor: pointer;
+    margin: 5px 0;
+    cursor: pointer;
 }
 
 .cdk-drag-animating {
@@ -20,29 +20,13 @@
 }
 
 .cdk-drag-placeholder {
-  opacity: 0.5;
+opacity: 0.5;
 }
 
-.blue {
-  background: #71deff;
-  color: black;
-}
-.green {
-  background: #36e9b6;
-  color: black;
-}
-.yellow {
-  background: #ffcf44;
-  color: black;
-}
-.purple {
-  background: #b15cff;
-}
-.red {
-  background: #e74a4a;
-}
+.blue { background: #71deff; color: black; }
+.green { background: #36e9b6; color: black;  }
+.yellow { background: #ffcf44; color: black; }
+.purple { background: #b15cff; }
+.red { background: #e74a4a; }
 
-.gray {
-  background: gray;
-  text-decoration: line-through;
-}
+.gray { background: gray; text-decoration: line-through; }
