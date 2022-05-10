@@ -20,8 +20,15 @@
       class="inner-card"
       cdkDrag
       *ngFor="let task of board.tasks; let i = index"
+      (click)="openDialog(task, i)"
     >
       <mat-card [ngClass]="task.label!"> {{ task.description }} </mat-card>
     </div>
+
+    <button mat-stroked-button (click)="openDialog()">
+      <mat-icon>add</mat-icon>
+    </button>
+
+    <app-delete-button (delete)="handleDelete()"></app-delete-button>
   </div>
 </mat-card>
