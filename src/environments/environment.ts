@@ -12,7 +12,7 @@ export const environment = {
     locationId: 'us-central',
     apiKey: 'AIzaSyCxjHdTVoosITWlUh7gHfyDe7bzrEGPyH4',
     authDomain: 'angular-project01-4ad1a.firebaseapp.com',
-    messagingSenderId: '825981028527',
+    messagingSenderId: '825981028527'
   }
 };
 

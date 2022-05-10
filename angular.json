@@ -113,9 +113,21 @@
             "firebaseProject": "angular-project01-4ad1a",
             "firebaseHostingSite": "angular-project01-4ad1a"
           }
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "angular-project01"
+  "defaultProject": "angular-project01",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }

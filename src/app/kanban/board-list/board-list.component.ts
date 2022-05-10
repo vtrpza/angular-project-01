@@ -13,12 +13,12 @@ export class BoardListComponent implements OnInit, OnDestroy {
   boards?: Board[];
   sub!: Subscription;
 
-  constructor(public boardService: BoardService) { }
+  constructor(public boardService: BoardService) {}
 
   ngOnInit(): void {
     this.sub = this.boardService
-    .getUserBoards()
-    .subscribe((boards: Board[]) => this.boards = boards);
+      .getUserBoards()
+      .subscribe((boards: Board[]) => (this.boards = boards));
   }
 
   ngOnDestroy(): void {
@@ -29,5 +29,4 @@ export class BoardListComponent implements OnInit, OnDestroy {
     moveItemInArray(this.boards!, event.previousIndex, event.currentIndex);
     this.boardService.sortBoards(this.boards!);
   }
-
 }

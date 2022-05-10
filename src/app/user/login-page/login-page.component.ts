@@ -7,7 +7,5 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
   styleUrls: ['./login-page.component.scss']
 })
 export class LoginPageComponent {
-
-  constructor(public afAuth: AngularFireAuth) { }
-
+  constructor(public afAuth: AngularFireAuth) {}
 }

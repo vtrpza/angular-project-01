@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import firebase from 'firebase/compat/app';
-import { switchMap, map } from 'rxjs/operators';
+import { map, switchMap } from 'rxjs/operators';
 import { Board, Task } from './board.model';
 
 @Injectable({
@@ -27,20 +27,14 @@ export class BoardService {
    * Delete board
    */
   deleteBoard(boardId: string) {
-    return this.db
-      .collection('boards')
-      .doc(boardId)
-      .delete();
+    return this.db.collection('boards').doc(boardId).delete();
   }
 
   /**
    * Updates the tasks on board
    */
   updateTasks(boardId: string, tasks: Task[]) {
-    return this.db
-      .collection('boards')
-      .doc(boardId)
-      .update({ tasks });
+    return this.db.collection('boards').doc(boardId).update({ tasks });
   }
 
   /**
@@ -60,10 +54,10 @@ export class BoardService {
    */
   getUserBoards() {
     return this.afAuth.authState.pipe(
-      switchMap(user => {
+      switchMap((user) => {
         if (user) {
           return this.db
-            .collection<Board>('boards', ref =>
+            .collection<Board>('boards', (ref) =>
               ref.where('uid', '==', user.uid).orderBy('priority')
             )
             .valueChanges({ idField: 'id' });
@@ -80,7 +74,7 @@ export class BoardService {
   sortBoards(boards: Board[]) {
     const db = firebase.firestore();
     const batch = db.batch();
-    const refs = boards.map(b => db.collection('boards').doc(b.id));
+    const refs = boards.map((b) => db.collection('boards').doc(b.id));
     refs.forEach((ref, idx) => batch.update(ref, { priority: idx }));
     batch.commit();
   }

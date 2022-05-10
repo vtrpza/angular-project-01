@@ -14,13 +14,9 @@ export class SnackService {
       duration: 5000
     });
 
-    return this.snackBar._openedSnackBarRef!
-      .onAction()
-      .pipe(
-        tap(_ =>
-          this.router.navigate(['/login'])
-        )
-      )
+    return this.snackBar
+      ._openedSnackBarRef!.onAction()
+      .pipe(tap((_) => this.router.navigate(['/login'])))
       .subscribe();
   }
 }

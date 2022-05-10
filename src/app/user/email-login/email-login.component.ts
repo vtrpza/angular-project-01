@@ -3,7 +3,7 @@ import {
   FormBuilder,
   FormControl,
   FormGroup,
-  Validators,
+  Validators
 } from '@angular/forms';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 
@@ -15,8 +15,8 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 export class EmailLoginComponent implements OnInit {
   form: FormGroup = new FormGroup({
     email: new FormControl(''),
-    password: new FormControl(''),
-  });;
+    password: new FormControl('')
+  });
 
   type: 'login' | 'signup' | 'reset' = 'signup';
   loading = false;
@@ -28,10 +28,7 @@ export class EmailLoginComponent implements OnInit {
   ngOnInit() {
     this.form = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: [
-        '',
-        [Validators.minLength(6), Validators.required]
-      ],
+      password: ['', [Validators.minLength(6), Validators.required]],
       passwordConfirm: ['', []]
     });
   }

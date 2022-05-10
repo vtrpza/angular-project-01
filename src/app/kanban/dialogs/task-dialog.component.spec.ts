@@ -8,9 +8,8 @@ describe('TaskDialogComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TaskDialogComponent ]
-    })
-    .compileComponents();
+      declarations: [TaskDialogComponent]
+    }).compileComponents();
   });
 
   beforeEach(() => {
