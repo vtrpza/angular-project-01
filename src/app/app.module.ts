@@ -12,11 +12,8 @@ import { UserModule } from './user/user.module';
 import { AppComponent } from './app.component';
 import { HomePageComponent } from './home-page/home-page.component';
 
-import { getFirestore, provideFirestore } from '@angular/fire/firestore';
-import { getAuth, provideAuth } from '@angular/fire/auth';
-import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+
 import { environment } from '../environments/environment';
-import { getDatabase, provideDatabase } from '@angular/fire/database';
 
 @NgModule({
   declarations: [AppComponent, HomePageComponent],
@@ -30,10 +27,6 @@ import { getDatabase, provideDatabase } from '@angular/fire/database';
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
     AngularFireStorageModule,
-    provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideAuth(() => getAuth()),
-    provideDatabase(() => getDatabase()),
-    provideFirestore(() => getFirestore()) // storage
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -8,14 +8,14 @@ import { SharedModule } from '../shared/shared.module';
 import { MatDialogModule } from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
-import { BoardListComponent } from './board-list/board-list.component';
+import { BoardsListComponent } from './boards-list/boards-list.component';
 import { BoardComponent } from './board/board.component';
 import { BoardDialogComponent } from './dialogs/board-dialog.component';
 import { TaskDialogComponent } from './dialogs/task-dialog.component';
 
 @NgModule({
   declarations: [
-    BoardListComponent,
+    BoardsListComponent,
     BoardComponent,
     BoardDialogComponent,
     TaskDialogComponent

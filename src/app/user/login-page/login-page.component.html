@@ -1,4 +1,4 @@
-<div *ngIf="!(afAuth.authState | async)">
+<div *ngIf="(afAuth.authState | async) === null">
   <h1>Login</h1>
 
   <button mat-raised-button appGoogleSignin>
