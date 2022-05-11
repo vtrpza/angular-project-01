@@ -1,6 +1,8 @@
 # AngularProject01
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.1.
+this project contains: 
+
+angular material, lazy-loading routing, user auth with firebase, reactive forms, drag and drop cdk
 
 ## Development server
 
