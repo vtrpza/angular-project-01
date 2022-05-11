@@ -4,7 +4,7 @@ import {
   CanActivate,
   RouterStateSnapshot
 } from '@angular/router';
-import { AngularFireAuth } from '@angular/fire/auth';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { SnackService } from '../services/snack.service';
 
 @Injectable({
@@ -19,6 +19,7 @@ export class AuthGuard implements CanActivate {
   ): Promise<boolean> {
     const user = await this.afAuth.currentUser;
     const isLoggedIn = !!user;
+
     if (!isLoggedIn) {
       this.snack.authError();
     }
