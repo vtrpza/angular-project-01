@@ -19,7 +19,6 @@ export class AuthGuard implements CanActivate {
   ): Promise<boolean> {
     const u = await this.afAuth.user;
     const isLoggedIn = !!u;
-    console.log(this.afAuth)
     if (!isLoggedIn) {
       this.snack.authError();
     }
