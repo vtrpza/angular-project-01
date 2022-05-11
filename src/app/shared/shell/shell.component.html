@@ -34,7 +34,7 @@
       >
         <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
       </button>
-      <span class="logo" routerLink="/">🔥 Angular Firestarter</span>
+      <span class="logo" routerLink="/">🔥 Angular 13</span>
 
       <span class="fill-space"></span>
       <div *ngIf="!(isHandset$ | async)">
@@ -46,20 +46,6 @@
 
       <!-- DROPDOWN MENU -->
 
-      <button
-        mat-icon-button
-        [matMenuTriggerFor]="menu"
-        aria-label="Example icon-button with a menu"
-      >
-        <mat-icon>more_vert</mat-icon>
-      </button>
-
-      <mat-menu #menu="matMenu">
-        <a mat-menu-item href="https://fireship.page.link/slack">
-          <i>💬</i>
-          <span>Chat on Slack</span>
-        </a>
-      </mat-menu>
     </mat-toolbar>
 
     <!-- TRANSCLUSION -->
