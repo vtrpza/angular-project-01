@@ -2,7 +2,7 @@
 
 this project contains: 
 
-angular material, lazy-loading routing, user auth with firebase, reactive forms, drag and drop cdk
+angular material, lazy-loading routing, route guard canActive, user auth with firebase, reactive forms, drag and drop cdk
 
 ## Development server
 
