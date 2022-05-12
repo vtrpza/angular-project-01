@@ -2,7 +2,7 @@
 
 this project contains: 
 
-angular material, lazy-loading routing, route guard canActive, user auth with firebase, firestore, reactive forms, drag and drop cdk, ssr, angular universal with nest.js, prerendering and deployment to Google Cloud Run
+angular material, lazy-loading routing, route guard canActive, user auth with firebase, firestore, reactive forms, drag and drop cdk
 
 ## Development server
 
